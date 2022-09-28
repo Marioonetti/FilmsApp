@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.detalles.peliculas.DetallesFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfPuntuacion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/numero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOverview">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfPuntuacionTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvTituloValoracionPropia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/labelValoracion"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalTextSize"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/tvNombre" />
+
+        <TextView
+            android:id="@+id/tvVisto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/visto"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/ivStar"
+            app:layout_constraintStart_toEndOf="@id/guideline4" />
+
+        <TextView
+            android:id="@+id/tvPuntuacionPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/yellow"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloValoracionPropia" />
+
+
+        <ImageView
+            android:id="@+id/imgPoster"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/margenTop" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/titleSize"
+            app:layout_constraintStart_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toTopOf="@id/margenTop" />
+
+        <TextView
+            android:id="@+id/tvResumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/resumenText"
+
+            android:textSize="@dimen/titleSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvResumen" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/titleSize"
+            app:layout_constraintBottom_toTopOf="@id/guideline5"
+            app:layout_constraintStart_toEndOf="@id/ivStar" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline5"
+            app:layout_constraintStart_toEndOf="@id/guideline4" />
+
+        <Button
+            android:id="@+id/btnPuntuacionPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/textoBtn"
+            app:layout_constraintStart_toEndOf="@id/tfPuntuacion"
+            app:layout_constraintTop_toBottomOf="@id/tvOverview" />
+
+        <Button
+            android:id="@+id/btnVisto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/textoVisto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfPuntuacion" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="350dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margenTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

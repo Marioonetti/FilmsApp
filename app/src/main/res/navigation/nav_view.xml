@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_view.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.appentretenimiento.ui.fragments.main.MainFragment"
+        android:label="Trending"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detalles_fragment"
+            app:destination="@id/detalles_fragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_mainFragment_to_seacrhFragment"
+            app:destination="@id/seacrhFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detallesSeriesFragment"
+            app:destination="@id/detallesSeriesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoritosFragment"
+            app:destination="@id/favoritosFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detalles_fragment"
+        android:name="com.example.appentretenimiento.ui.fragments.detalles.peliculas.DetallesFragment"
+        android:label="Detalles Pelicula"
+        tools:layout="@layout/detalles_fragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/seacrhFragment"
+        android:name="com.example.appentretenimiento.ui.fragments.busqueda.SearchFragment"
+        android:label="Buscar"
+        tools:layout="@layout/fragment_seacrh" >
+        <action
+            android:id="@+id/action_seacrhFragment_to_detalles_fragment"
+            app:destination="@id/detalles_fragment" />
+        <action
+            android:id="@+id/action_seacrhFragment_to_detallesSeriesFragment2"
+            app:destination="@id/detallesSeriesFragment" />
+        <action
+            android:id="@+id/action_seacrhFragment_to_detallesActores"
+            app:destination="@id/detallesActores" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesSeriesFragment"
+        android:name="com.example.appentretenimiento.ui.fragments.detalles.series.DetallesSeriesFragment"
+        android:label="Detalles Serie"
+        tools:layout="@layout/fragment_detalles_series" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detallesSeriesFragment_to_detallesTemporada"
+            app:destination="@id/detallesTemporada" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.appentretenimiento.ui.fragments.favoritos.FavoritosFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favoritos" >
+
+        <action
+            android:id="@+id/action_favoritosFragment_to_favLocalFilms"
+            app:destination="@id/favLocalFilms" />
+        <action
+            android:id="@+id/action_favoritosFragment_to_detallesSeriesFragment"
+            app:destination="@id/detallesSeriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesActores"
+        android:name="com.example.appentretenimiento.ui.fragments.detalles.actores.DetallesActores"
+        android:label="Detalles Actores"
+        tools:layout="@layout/fragment_detalles_actores" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesTemporada"
+        android:name="com.example.appentretenimiento.ui.fragments.detalles.series.temporadas.DetallesTemporada"
+        android:label="Detalles Temporada"
+        tools:layout="@layout/fragment_detalles_temporada" >
+        <argument
+            android:name="idSerie"
+            app:argType="integer" />
+        <argument
+            android:name="numTemporada"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/favLocalFilms"
+        android:name="com.example.appentretenimiento.ui.fragments.favoritos.detalles.peliculas.FavLocalFilms"
+        android:label="Detalles Pelicula"
+        tools:layout="@layout/fragment_fav_local_films" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

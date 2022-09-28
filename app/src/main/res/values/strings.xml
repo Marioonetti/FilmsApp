@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AppEntretenimiento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favortios">Favortios</string>
+    <string name="buscar">Buscar</string>
+    <string name="seriesTitulo">Series del momento</string>
+    <string name="asel">selected</string>
+    <string name="resumenText">"Resumen: "</string>
+    <string name="peliculasTitulo">Peliculas del Momento</string>
+    <string name="biografia">Biografia</string>
+    <string name="peliculasTituloFavs">Peliculas Favoritas</string>
+    <string name="seriesTituloFavs">Series Favoritas</string>
+    <string name="textoBoton">Guardar</string>
+    <string name="favoritosText">Favoritos:</string>
+    <string name="home">Home</string>
+    <string name="textoBtn">Puntuar</string>
+    <string name="numero">Valoración</string>
+    <string name="labelValoracion">Valoración Personal:</string>
+    <string name="visto">VISTO</string>
+    <string name="textoVisto">Visto</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/lupaBuscar"
+        android:icon="@drawable/outline_search_24"
+        android:title="@string/buscar"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/btnFav"
+        android:title="@string/favortios"
+        android:icon="@drawable/outline_favorite_border_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/btnHome"
+        android:title="@string/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="ifRoom" />
+
+</menu>
